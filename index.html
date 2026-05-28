@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Patent & IP Tools Access | PAT Viewer & 9990 Platform</title>
+    <meta name="description" content="Quick access to professional patent viewing and intellectual property tools. Launch PAT-Viewer or 9990 PAT platform directly from this secure hub.">
+    <meta name="keywords" content="patent viewer, IP tools, patent search, 9990 PAT, patent database, intellectual property">
+    <meta name="author" content="Patent Access Hub">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.pat-access.com/">
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Patent & IP Tools Access | PAT Viewer & 9990 Platform">
+    <meta property="og:description" content="One-click access to leading patent and intellectual property platforms. Secure, fast and mobile-optimized.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pat-access.com/">
+    <meta property="og:image" content="https://www.pat-access.com/og-patent-tools.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patent & IP Tools Access">
+    <meta name="twitter:description" content="Access PAT-Viewer and 9990 PAT platform instantly.">
+    <!-- Favicon / safety fallback -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231a365c'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='16' font-weight='bold'%3EPT%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <style>
+        /* Modern CSS reset & accessibility base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            background: linear-gradient(145deg, #eef2f9 0%, #f9fafc 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            color: #0b1e33;
+        }
+
+        /* Main container with smooth card appearance */
+        .access-panel {
+            max-width: 720px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(0px);
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(103, 133, 180, 0.2);
+        }
+
+        /* header / hero */
+        .hero {
+            text-align: center;
+            padding: 2rem 2rem 1rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a4972;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 0.3rem 0.9rem;
+            border-radius: 40px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0f2c44, #193e62);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .sub {
+            font-size: 1rem;
+            color: #2c4e74;
+            max-width: 80%;
+            margin: 0.75rem auto 0;
+            line-height: 1.4;
+        }
+
+        /* button grid layout - mobile first 2 columns on tablets+ */
+        .button-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem 2rem 2.5rem 2rem;
+        }
+
+        /* individual cards */
+        .tool-card {
+            background: white;
+            border-radius: 1.5rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e9edf2;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 30px -12px rgba(0, 30, 60, 0.15);
+            border-color: #cbdde9;
+        }
+
+        .card-inner {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .tool-icon {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tool-icon span:first-child {
+            background: #eef3fc;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            line-height: 1;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0a2a44;
+            margin-bottom: 0.4rem;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #4b5b6c;
+            margin: 0.5rem 0 1rem 0;
+            line-height: 1.4;
+        }
+
+        /* CTA button style */
+        .pat-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #0a2a44;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.9rem 0;
+            border-radius: 3rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .pat-btn i {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .pat-btn .arrow {
+            transition: transform 0.2s;
+        }
+
+        .pat-btn:hover {
+            background: #123e64;
+            transform: scale(1.01);
+            box-shadow: 0 8px 18px rgba(0, 40, 70, 0.2);
+        }
+
+        .pat-btn:hover .arrow {
+            transform: translateX(4px);
+        }
+
+        /* secondary variant for second button (different accent but consistent) */
+        .tool-card:first-child .pat-btn {
+            background: #1c5d8c;
+        }
+        .tool-card:first-child .pat-btn:hover {
+            background: #154f77;
+        }
+
+        .tool-card:last-child .pat-btn {
+            background: #0f3b5c;
+        }
+        .tool-card:last-child .pat-btn:hover {
+            background: #0b2e48;
+        }
+
+        /* external link indicator (subtle) */
+        .external-badge {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            margin-left: 0.4rem;
+        }
+
+        /* footer & accessibility */
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #5c6f87;
+            padding: 1rem 1rem 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            background: #fbfdff;
+        }
+
+        .footer-note p {
+            margin: 0.25rem 0;
+        }
+
+        .footer-note a {
+            color: #2c6280;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9d0e2;
+        }
+
+        .footer-note a:hover {
+            color: #0f3b5c;
+        }
+
+        /* mobile optimizations: larger tap targets, comfortable spacing */
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem;
+            }
+            .hero {
+                padding: 1.5rem 1rem 0.75rem 1rem;
+            }
+            .button-grid {
+                padding: 1.5rem 1.5rem 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .sub {
+                font-size: 0.85rem;
+                max-width: 95%;
+            }
+            .pat-btn {
+                padding: 0.8rem 0;
+                font-size: 0.95rem;
+            }
+            .card-inner {
+                padding: 1.2rem;
+            }
+        }
+
+        /* high contrast focus ring for accessibility */
+        .pat-btn:focus-visible {
+            outline: 3px solid #ffb347;
+            outline-offset: 2px;
+            border-radius: 3rem;
+        }
+
+        /* make links fully keyboard accessible */
+        .tool-card:focus-within {
+            outline: 2px solid #1c5d8c;
+            border-radius: 1.5rem;
+        }
+
+        /* optional subtle animation on page load */
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .access-panel {
+            animation: fadeSlideUp 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <main class="access-panel" role="main">
+        <div class="hero">
+            <div class="badge">⚙️ Official Access Hub</div>
+            <h1>Patent Intelligence Suite</h1>
+            <div class="sub">Streamlined access to professional patent viewers & intellectual property platforms</div>
+        </div>
+
+        <div class="button-grid">
+            <!-- Button 1: PAT-Viewer -->
+            <div class="tool-card">
+                <div class="card-inner">
+                    <div class="tool-icon">
+                        <span>📑</span>
+                        <span>🔍</span>
+                    </div>
+                    <h2>PAT Viewer Pro</h2>
+                    <div class="description">
+                        Comprehensive patent document viewer with advanced analytics, global patent database, and real-time citation mapping.
+                    </div>
+                    <a href="https://pat-viewer.com/" class="pat-btn" target="_blank" rel="noopener noreferrer" aria-label="Open PAT Viewer official website (new tab)">
+                        <i>Launch PAT Viewer</i> 
+                        <span class="arrow">↗</span>
+                        <span class="external-badge" aria-hidden="true">external</span>
+                    </a>
+                    <p style="font-size: 0.7rem; color: #6c86a3; margin-top: 0.8rem; text-align: center;">Secure connection · Full patent portfolio access</p>
+                </div>
+            </div>
+
+            <!-- Button 2: 9990.site/pat/ -->
+            <div class="tool-card">
+                <div class="card-inner">
+                    <div class="tool-icon">
+                        <span>🧠</span>
+                        <span>📊</span>
+                    </div>
+                    <h2>9990 PAT Platform</h2>
+                    <div class="description">
+                        Next-gen patent dashboard: search, cross-reference, and analyze intellectual property data with modern interface.
+                    </div>
+                    <a href="https://9990.site/pat/" class="pat-btn" target="_blank" rel="noopener noreferrer" aria-label="Open 9990 PAT platform in new tab">
+                        <i>Access 9990 PAT</i> 
+                        <span class="arrow">↗</span>
+                        <span class="external-badge" aria-hidden="true">external</span>
+                    </a>
+                    <p style="font-size: 0.7rem; color: #6c86a3; margin-top: 0.8rem; text-align: center;">Fast interface · AI-powered patent insights</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>🔒 Trusted tools for IP professionals · Click any button to navigate securely</p>
+            <p>📌 <a href="#" aria-label="Bookmark this page (Patent tools access hub)">Bookmark this hub</a> for quick access to essential patent resources</p>
+            <p style="margin-top: 6px;">© 2025 Patent Access Hub — Optimized for mobile & desktop</p>
+        </div>
+    </main>
+
+    <!-- Optional structured data (SEO enhancement) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Patent Tools Access | PAT Viewer and 9990 Platform",
+      "description": "Quick access to two essential patent platforms: PAT-Viewer and 9990 PAT. Secure, mobile-friendly and SEO optimized.",
+      "url": "https://www.pat-access.com/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "PAT Viewer",
+            "url": "https://pat-viewer.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "9990 PAT Platform",
+            "url": "https://9990.site/pat/"
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "ChooseAction",
+        "actionOption": [
+          {
+            "@type": "Action",
+            "name": "Visit PAT Viewer",
+            "target": "https://pat-viewer.com/"
+          },
+          {
+            "@type": "Action",
+            "name": "Visit 9990 PAT",
+            "target": "https://9990.site/pat/"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Extra performance & security: "noreferrer" ensures no referrer leakage; target blank safe -->
+    <!-- All external links use rel="noopener noreferrer" for privacy/security -->
+    <!-- Mobile tap highlight removal + smooth behaviour -->
+    <style>
+        /* ensure no default tap highlight on mobile */
+        .pat-btn {
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* optional subtle dark mode support (improves readability) */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(145deg, #111d2c, #0f1722);
+            }
+            .access-panel {
+                background: rgba(20, 30, 44, 0.96);
+                border: 1px solid rgba(70, 100, 130, 0.3);
+            }
+            .hero {
+                border-bottom-color: rgba(255,255,255,0.05);
+            }
+            h1 {
+                background: linear-gradient(135deg, #d6e6ff, #9ac2e0);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .badge {
+                background: #2c577c;
+                color: #f0f6ff;
+            }
+            .sub {
+                color: #b9d0e8;
+            }
+            .tool-card {
+                background: #182635;
+                border-color: #2c4058;
+            }
+            h2 {
+                color: #e2edff;
+            }
+            .description {
+                color: #adc4e2;
+            }
+            .footer-note {
+                background: #0f1a24;
+                border-top-color: #253c52;
+                color: #99b8da;
+            }
+            .footer-note a {
+                color: #8fc9ff;
+            }
+            .pat-btn {
+                background: #1f547b;
+            }
+            .tool-card:first-child .pat-btn {
+                background: #236b9b;
+            }
+            .tool-card:last-child .pat-btn {
+                background: #124e72;
+            }
+            .pat-btn:hover {
+                background: #2f6c9b;
+            }
+            .tool-card:hover {
+                border-color: #5082b0;
+            }
+        }
+        /* ensure that external link icons are visible only if needed */
+        .external-badge {
+            font-size: 0.65rem;
+            background: rgba(255,255,240,0.2);
+            padding: 2px 6px;
+            border-radius: 30px;
+        }
+        @media (max-width: 450px) {
+            .external-badge {
+                display: inline-block;
+                font-size: 0.6rem;
+            }
+            .pat-btn {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- small script to add monitoring of outbound links (optional for analytics, no tracking, just ensuring user confirmation? no, improves UX not needed. But we ensure that all clicks open safely -->
+    <script>
+        (function() {
+            // adding simple console info for developers, but no intrusive tracking. Also ensures external links open securely.
+            // We also ensure that any potential right-click or intermediate redirection is safe.
+            // for SEO and better accessibility, no page redirection, everything handled by anchor.
+            // Add an extra hint: dynamically update document title on focus? Not necessary but nice.
+            // Also includes loading="lazy" for images not needed here, but keep footprint minimal.
+            // Just guarantee all external links have noreferrer and noopener (already in HTML)
+            // optional: warn if someone clicks on bookmark link (prevent default dummy)
+            const dummyBookmark = document.querySelector('.footer-note a[href="#"]');
+            if (dummyBookmark) {
+                dummyBookmark.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // prompt to bookmark: modern browsers allow using window bookmark but we just show friendly message
+                    if (window.sidebar && window.sidebar.addPanel) { // Firefox old
+                        window.sidebar.addPanel(document.title, window.location.href, "");
+                    } else if (window.external && ('AddFavorite' in window.external)) { // IE
+                        window.external.AddFavorite(window.location.href, document.title);
+                    } else {
+                        alert('💡 Tip: Press Ctrl+D (Cmd+D on Mac) to bookmark this Patent Tools Hub for quick access.');
+                    }
+                });
+            }
+            // small additional security: ensure no accidental blank referrer handling
+            const allLinks = document.querySelectorAll('a[target="_blank"]');
+            for (let link of allLinks) {
+                if (!link.rel || (!link.rel.includes('noopener') && !link.rel.includes('noreferrer'))) {
+                    link.rel = 'noopener noreferrer';
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
